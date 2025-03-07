@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: grab;
+            transition: opacity 0.3s;
+        }
+        li.dragging {
+            opacity: 0.5;
+        }
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .dark-mode {
+            background: #333;
+            color: white;
+        }
+        .dark-mode li {
+            background: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Advanced Todo List</h2>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <input type="text" id="todo-input" placeholder="Enter new todo">
+    <button id="add-btn">Add Todo</button>
+    <ul id="todo-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
